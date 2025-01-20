@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "concurrently \"pnpm build:css\"  \"nuxt build\" ",
+    "build:css": "postcss ./input.css -o ./assets/output.css",
+    "dev": "concurrently \"pnpm dev:css\"  \"nuxt dev\" ",
+    "dev:css": "postcss ./input.css -o ./assets/output.css -w",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "nuxt": "^3.15.2",
+    "prisma": "^6.2.1",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.23",
+    "postcss": "^8.5.1",
+    "postcss-cli": "^11.0.0",
+    "tailwind-scrollbar-hide": "^2.0.0",
+    "tailwindcss": "^3.4.17"
+  }
+}
