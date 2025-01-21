@@ -20,5 +20,8 @@ export default {
     require('daisyui'),
     require('tailwind-scrollbar-hide'),
   ],
+  daisyui: {
+    themes: [],
+  },
 };
 

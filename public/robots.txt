@@ -1,1 +1,36 @@
+# Règles globales pour tous les robots
+User-agent: *
+Allow: /
+Allow: /login/
+Allow: /signup/
+Allow: /about/
+Allow: /contact/
 
+# Interdire l'accès aux dossiers privés
+Disallow: /admin/
+Disallow: /private/
+Disallow: /backend/
+Disallow: /wp-admin/
+Disallow: /includes/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Interdire l'accès aux fichiers sensibles
+Disallow: /*.php$
+Disallow: /*.sql
+Disallow: /*.config
+Disallow: /*.env
+Disallow: /*.log
+
+# Interdire l'indexation des pages de recherche et filtres
+Disallow: /search/
+Disallow: /*?q=
+Disallow: /*?filter=
+Disallow: /*?sort=
+
+# Sitemap
+Sitemap: https://memo-rize.vercel.app/sitemap.xml
+
+# Règles spécifiques pour Googlebot
+User-agent: Googlebot
+Crawl-delay: 1

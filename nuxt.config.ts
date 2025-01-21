@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   css: ['~/assets/output.css'],
+
   app: {
     head: {
       link: [
@@ -14,7 +15,14 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap',
           rel: 'stylesheet',
         },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: '/icon.png',
+        },
       ],
     },
   },
+
+  modules: ['@pinia/nuxt'],
 });
