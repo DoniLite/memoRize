@@ -3,6 +3,9 @@
 </script>
 
 <template>
+  <Head>
+    <Link rel="icon" href="/icon.svg"></Link>
+  </Head>
   <div>
     <NuxtLayout :name="layout">
       <NuxtPage />
